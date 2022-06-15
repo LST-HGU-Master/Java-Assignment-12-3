@@ -11,6 +11,7 @@
 | getLevenshteinDistance | String str | int   | public | 
 
 ### レーベンシュタイン距離を求める疑似コード
+　（注意）この疑似コードは入力が空文字""の場合の動作は考慮していない
 
 ```
 1. str1の文字数をM、str2の文字数をNとする
