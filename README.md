@@ -29,7 +29,7 @@
 6. d[M -1][N -1] がレーベンシュタイン距離となる
 ```
 
-### ProgC3.java (提出不要)
+### ProgC3.java (変更・提出不要)
 ```java
 public class ProgC3 {
 
@@ -42,7 +42,7 @@ public class ProgC3 {
 ```
 
 
-### ProgC3の実行結果
+### ProgC3.main()の実行結果
 ```
  0  1  2  3  4  5  6  7  8  9 
  1  0  0  0  0  0  0  0  0  0 
