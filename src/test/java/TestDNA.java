@@ -1,9 +1,9 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 import java.io.*;
 /**
- * @version (20220615)
+ * @version (20220707)
  *  注意）このテストコードは DNAクラスに課題12-1のコード と getLevenshteinDistance()が定義されるまでエラーとなる
  */
 public class TestDNA {
@@ -40,11 +40,11 @@ public class TestDNA {
         // assertion
         String[] prints = bos.toString().split("\r\n|\n", -1);
         try {
-            assertEquals(" 0  1  2  3  4  5  6", prints[0],"int型二次元配列dの初期化が疑似コードと異なります!");
-            assertEquals(" 1  0  0  0  0  0  0", prints[1],"int型二次元配列dの初期化が疑似コードと異なります!");
-            assertEquals(" 2  0  0  0  0  0  0", prints[2],"int型二次元配列dの初期化が疑似コードと異なります!");
-            assertEquals(" 3  0  0  0  0  0  0", prints[3],"int型二次元配列dの初期化が疑似コードと異なります!");
-            assertEquals(" 4  0  0  0  0  0  0", prints[4],"int型二次元配列dの初期化が疑似コードと異なります!");
+            assertTrue(prints[0].contains(" 0  1  2  3  4  5  6"), "int型二次元配列dの初期化が疑似コードと異なります!");
+            assertTrue(prints[1].contains(" 1  0  0  0  0  0  0"),"int型二次元配列dの初期化が疑似コードと異なります!");
+            assertTrue(prints[2].contains(" 2  0  0  0  0  0  0"),"int型二次元配列dの初期化が疑似コードと異なります!");
+            assertTrue(prints[3].contains(" 3  0  0  0  0  0  0"),"int型二次元配列dの初期化が疑似コードと異なります!");
+            assertTrue(prints[4].contains(" 4  0  0  0  0  0  0"),"int型二次元配列dの初期化が疑似コードと異なります!");
             assertEquals("", prints[5],"int型二次元配列dの初期化表示の直下に改行以外の文字があります!");
         } catch (ArrayIndexOutOfBoundsException excpt) {
                 fail("DNA.getLevenshteinDistance()のprint出力が不足しています!");
@@ -71,11 +71,11 @@ public class TestDNA {
         // assertion
         String[] prints = bos.toString().split("\r\n|\n", -1);
         try {
-            assertEquals(" 0  1  2  3  4  5  6", prints[6],"d[i][j]の計算に間違いがあります!");
-            assertEquals(" 1  0  1  2  3  4  5", prints[7],"d[i][j]の計算に間違いがあります!");
-            assertEquals(" 2  1  0  1  2  3  4", prints[8],"d[i][j]の計算に間違いがあります!");
-            assertEquals(" 3  2  1  1  2  2  3", prints[9],"d[i][j]の計算に間違いがあります!");
-            assertEquals(" 4  3  2  2  1  2  3", prints[10],"d[i][j]の計算に間違いがあります!");
+            assertTrue(prints[6].contains(" 0  1  2  3  4  5  6"),"d[i][j]の計算に間違いがあります!");
+            assertTrue(prints[7].contains(" 1  0  1  2  3  4  5"),"d[i][j]の計算に間違いがあります!");
+            assertTrue(prints[8].contains(" 2  1  0  1  2  3  4"),"d[i][j]の計算に間違いがあります!");
+            assertTrue(prints[9].contains(" 3  2  1  1  2  2  3"),"d[i][j]の計算に間違いがあります!");
+            assertTrue(prints[10].contains(" 4  3  2  2  1  2  3"),"d[i][j]の計算に間違いがあります!");
         } catch (ArrayIndexOutOfBoundsException excpt) {
                 fail("DNA.getLevenshteinDistance()のprint出力が不足しています!");
         }
